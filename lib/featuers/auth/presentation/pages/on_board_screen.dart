@@ -159,8 +159,10 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                               .saveBool(PrefKeys.showBoardScreen.name, true)
                               .then((value) {
                             if (value) {
-                              Navigator.pushNamed(
-                                  context, LoginScreen.SCREEN_NAME);
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (c) => LoginScreen()));
                             }
                           });
                         },

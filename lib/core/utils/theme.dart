@@ -115,7 +115,7 @@ final darkTheme = ThemeData(
           color: Colors.grey[500]!,
         ),
       ),
-      labelStyle: GoogleFonts.neuton(fontSize: 15, color: Colors.grey[500]),
+      labelStyle: GoogleFonts.poppins(fontSize: 15, color: Colors.grey[500]),
     ),
     iconTheme: const IconThemeData(
       color: Color(0xFFE3E3E3),

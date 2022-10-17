@@ -1,9 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_store/core/consts/colors.dart';
 import 'package:flutter_gen/gen_l10n/app-localizations.dart';
-import 'package:furniture_store/featuers/auth/presentation/pages/code_screen.dart';
 import 'package:furniture_store/featuers/auth/presentation/widgets/text_form_field_widget.dart';
 
 import '../widgets/inkwell_widget.dart';
@@ -17,6 +17,7 @@ class ForgetPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: _buildBody(context: context),
     );
   }
@@ -98,7 +99,11 @@ class ForgetPasswordScreen extends StatelessWidget {
           ),
           Text(
             AppLocalizations.of(context)!.forget_password,
-            style: Theme.of(context).textTheme.headline2,
+            style: Theme.of(context).textTheme.headline2?.copyWith(
+                color:
+                    MediaQuery.of(context).platformBrightness == Brightness.dark
+                        ? Color(0xFF7B7B7B)
+                        : Color(0xFF484848)),
           ),
           SizedBox(
             height: 20.h,
@@ -106,9 +111,10 @@ class ForgetPasswordScreen extends StatelessWidget {
           Text(
             AppLocalizations.of(context)!.forget_pass_text,
             style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                fontSize: 14.sp,
                 color: MediaQuery.of(context).platformBrightness ==
                         Brightness.light
-                    ? const Color(0xFF525252)
+                    ? const Color(0xFF484848)
                     : const Color(0xFFB0B0B0)),
             textAlign: TextAlign.center,
           ),
@@ -125,11 +131,8 @@ class ForgetPasswordScreen extends StatelessWidget {
             height: 70.h,
           ),
           MaterialButtonWidget(
-            label: AppLocalizations.of(context)!.login,
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => CodeScreen()));
-            },
+            label: AppLocalizations.of(context)!.continue_u,
+            onPressed: () {},
           ),
         ],
       ),

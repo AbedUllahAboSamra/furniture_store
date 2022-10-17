@@ -19,6 +19,20 @@
   "alreadyHaveAccount": "Already have an account ?",
   "login": "Log in",
   "email": "Email",
+  "newPass": "New Password ?",
+  "newPassText": "You Can Type your new password\nand confirm it below",
+  "newPasswordTFF": "New Password",
+  "confirmPassword": "Confirm Password",
+  "updatePassword": "Update Password",
+  "updatedPassword": "Password\nUpdated",
+  "yourPasswordUpdated": "Your Password has been Updated",
+  "fullName": "Full Name",
+  "phone": "Phone",
+  "country": "Country",
+
+  "continue_u": "Continue",
+   "donGetCode": "didn't get the code ?",
+   "resendCode": "Resend code",
   "forget_pass_text": "Please Type Your Email or phone No Below and\n we can help you rest password"
 
 }
