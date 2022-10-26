@@ -6,6 +6,7 @@ import '../consts/colors.dart';
 
 final lightTheme = ThemeData(
   primaryColor: mainColor,
+  cardColor: Colors.white,
   textTheme: TextTheme(
     headline1: GoogleFonts.poppins(
       fontSize: 24.sp,
@@ -64,6 +65,8 @@ final lightTheme = ThemeData(
 
 final darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.black87,
+
+    cardColor: Colors.grey[900],
     primaryColor: mainColor,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Color(0x51777777),

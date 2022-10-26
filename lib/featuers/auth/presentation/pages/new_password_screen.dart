@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_store/featuers/auth/presentation/pages/password_updated_done_screen.dart';
 import 'package:furniture_store/featuers/auth/presentation/widgets/text_form_field_widget.dart';
+import '../../../../core/widget/back_icon.dart';
 import '../widgets/inkwell_widget.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app-localizations.dart';
@@ -33,19 +34,7 @@ class NewPasswordScreen extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
-                  InkWellWidget(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                        height: 20.h,
-                        width: double.infinity,
-                        alignment: AlignmentDirectional.centerStart,
-                        child: const Icon(
-                          Icons.arrow_back_sharp,
-                          color: mainColor,
-                        )),
-                  ),
+                  const  BackIcon( ),
                   SizedBox(
                     height: 16.h,
                   ),

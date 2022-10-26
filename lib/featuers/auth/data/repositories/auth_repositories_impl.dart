@@ -39,7 +39,7 @@ class AuthRepositoriesImpl implements AuthRepository {
             await remoteDataSource.signInUser(email: email, password: password);
         localDataSource.setUserData(user: user);
         return Right(user);
-      } on ServerErrorExceotion {
+      } on ServerErrorException {
         return Left(ServerFailure());
       }
     } else {

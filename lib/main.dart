@@ -6,9 +6,13 @@ import 'package:flutter_gen/gen_l10n/app-localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_store/core/utils/theme.dart';
 import 'package:furniture_store/featuers/auth/presentation/manager/auth_bloc.dart';
- import 'package:furniture_store/featuers/auth/presentation/pages/login_screen.dart';
+import 'package:furniture_store/featuers/auth/presentation/pages/login_screen.dart';
 import 'package:furniture_store/featuers/auth/presentation/pages/on_board_screen.dart';
+import 'package:furniture_store/featuers/main/presentation/manager/main_bloc.dart';
+import 'package:furniture_store/featuers/main/presentation/pages/details_screen.dart';
+import 'package:furniture_store/featuers/main/presentation/pages/reviews_screen.dart';
 import 'core/pref/shared_pref_controller.dart';
+import 'featuers/main/presentation/pages/map/map_screen.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -29,12 +33,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var home = isShwon ? LoginScreen() :const OnBoardScreen();
+    var home = isShwon ? MapScreen() :const OnBoardScreen();
 
     return MultiBlocProvider(
         providers: [
           BlocProvider(
             create: (_) => di.sl<AuthBloc>(),
+          ),
+          BlocProvider(
+            create: (_) => di.sl<MainBloc>()..add(GetCurrentLocationEvent()),
           ),
         ],
         child: ScreenUtilInit(
@@ -57,7 +64,7 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 theme: lightTheme,
                 darkTheme: darkTheme,
-                themeMode: ThemeMode.dark,
+                themeMode: ThemeMode.light,
                 locale: const Locale('en', ''),
               );
             }));
