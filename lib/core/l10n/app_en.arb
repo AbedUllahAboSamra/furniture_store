@@ -10,6 +10,10 @@
   "password": "Password",
   "enter_code_text": "Enter the 4 - digits code",
   "enter_code_sub_text": "Please enter  the 4-digital code we sent via sms to continue",
+  "review": "Review",
+  "selectQuantity": "Select Quantity",
+  "addToCart": "Add to cart",
+  "setLocation": "Set Location",
 
   "forget_password": "Forget Password ?",
   "or": "Or",

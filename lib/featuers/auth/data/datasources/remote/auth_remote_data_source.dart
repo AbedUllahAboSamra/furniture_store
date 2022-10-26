@@ -38,10 +38,10 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
       if (userData.data() != null) {
         return UserModel.fromJson(json: userData.data()!);
       } else {
-        throw ServerErrorExceotion();
+        throw ServerErrorException();
       }
     } else {
-      throw ServerErrorExceotion();
+      throw ServerErrorException();
     }
   }
 
@@ -58,7 +58,7 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
        final usrData = await fireStore.collection('user').doc(usr.user!.uid).set(user.toJson());
       return user;
     }else{
-      throw ServerErrorExceotion();
+      throw ServerErrorException();
     }
   }
 }

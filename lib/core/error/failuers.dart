@@ -18,4 +18,13 @@ class EmptyCacheFailure extends Failure {
   @override
   List<Object?> get props => [];
 }
+class ServerLocationFailure extends Failure {
+  @override
+  List<Object?> get props => [];
+}
+
+class LocationGpsFailure extends Failure {
+  @override
+  List<Object?> get props => [];
+}
 

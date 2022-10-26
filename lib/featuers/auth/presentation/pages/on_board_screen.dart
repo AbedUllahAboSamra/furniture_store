@@ -63,6 +63,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                 },
                 controller: controller,
                 onPageChanged: (index) {
+
                   setState(() {
                     selectedItem = index;
                   });
